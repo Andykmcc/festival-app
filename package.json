@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Andykmcc/festival-app#readme",
   "devDependencies": {
+    "bower": "^1.7.1",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.7"
   }
