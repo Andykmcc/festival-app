@@ -1,0 +1,19 @@
+{
+  "name": "festival-app",
+  "version": "1.0.0",
+  "description": "Web app for music festival",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Andykmcc/festival-app.git"
+  },
+  "author": "Andy McCoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andykmcc/festival-app/issues"
+  },
+  "homepage": "https://github.com/Andykmcc/festival-app#readme"
+}
