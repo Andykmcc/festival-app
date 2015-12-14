@@ -18,7 +18,7 @@ gulp.task('html', function() {
     .pipe(plugins.connect.reload());
 });
 
-gulp.task('browserify', function() {
+gulp.task('js', function() {
   // Grabs the app.js file
   return plugins.browserify(config.src + '/app.js')
     // bundles it and creates a file called main.js
@@ -31,7 +31,7 @@ gulp.task('browserify', function() {
 
 gulp.task('watch', function() {
   gulp.watch('src/**/*.html', ['html']);
-  gulp.watch('src/**/*.js', ['browserify']);
+  gulp.watch('src/**/*.js', ['js']);
   // Watches for changes in style.sass and runs the sass task
   // gulp.watch('src/scss/style.sass', ['sass'])
 })
