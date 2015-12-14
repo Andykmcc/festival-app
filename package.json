@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Andykmcc/festival-app/issues"
   },
-  "homepage": "https://github.com/Andykmcc/festival-app#readme"
+  "homepage": "https://github.com/Andykmcc/festival-app#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7"
+  }
 }
