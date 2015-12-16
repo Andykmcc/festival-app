@@ -1,3 +1,12 @@
+@import '../../styleResources/neat/neat';
+
 .Home__title {
   color: red;
+  @include span-columns(12 of 12);
+}
+.About__about {
+  @include span-columns(6 of 12);
+}
+.About__heading2 {
+  
 }

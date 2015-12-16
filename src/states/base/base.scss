@@ -1,0 +1,9 @@
+@import '../../styleResources/neat/neat';
+@import 'reset';
+
+.Nav__container {
+  @include outer-container;
+}
+.Main__container {
+  @include outer-container;
+}

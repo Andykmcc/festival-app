@@ -1,3 +1,4 @@
+var _ = require('lodash');
 var config = require('./config/dev');
 var gulp = require('gulp');
 var gulpLoadPlugins = require('gulp-load-plugins');
@@ -62,4 +63,6 @@ gulp.task('watch', function() {
   // gulp.watch('src/scss/style.sass', ['sass'])
 })
 
-gulp.task('default', ['connect', 'watch']);
+gulp.task('build', ['markup', 'scripts', 'style']);
+
+gulp.task('default', ['build', 'connect', 'watch']);
