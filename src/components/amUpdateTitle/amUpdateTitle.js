@@ -1,3 +1,4 @@
+// directiv to update title of page on state change
 module.exports = function($rootScope, $timeout) {
   return {
     restrict: 'A',
