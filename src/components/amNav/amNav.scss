@@ -1,0 +1,10 @@
+.Nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+.Nav__item {
+  display: flex;
+  flex-grow: 1;
+}
