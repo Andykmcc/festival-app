@@ -12,13 +12,23 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('html', function() {
+gulp.task('clean-markup', function () {
+  return gulp.src(config.build + '/**/*.html', {read: false})
+    .pipe(plugins.clean());
+});
+
+gulp.task('markup', ['clean-markup'], function() {
   return gulp.src(config.src + '/**/*.html')
     .pipe(gulp.dest(config.build))
     .pipe(plugins.connect.reload());
 });
 
-gulp.task('js', function() {
+gulp.task('clean-scripts', function () {
+  return gulp.src(config.build + '/**/*.js', {read: false})
+    .pipe(plugins.clean());
+});
+
+gulp.task('scripts', ['clean-scripts'], function() {
   // Grabs the app.js file
   return plugins.browserify(config.src + '/app.js')
     // bundles it and creates a file called main.js
@@ -29,9 +39,25 @@ gulp.task('js', function() {
     .pipe(plugins.connect.reload());
 });
 
+gulp.task('clean-style', function () {
+  return gulp.src(config.build + '/**/*.css', {read: false})
+    .pipe(plugins.clean());
+});
+
+gulp.task('style', ['clean-style'], function () {
+  gulp.src([config.src + '/states/**/*.scss', config.src + '/components/**/*.scss'])
+    .pipe(plugins.sass().on('error', plugins.sass.logError))
+    .pipe(plugins.concat('main.css'))
+    .pipe(gulp.dest(config.build + '/style/'));
+});
+
 gulp.task('watch', function() {
-  gulp.watch('src/**/*.html', ['html']);
-  gulp.watch('src/**/*.js', ['js']);
+  gulp.watch(config.src + '/**/*.html', ['markup']);
+  gulp.watch(config.src + '/**/*.js', ['scripts']);
+  gulp.watch([config.src + '/styleResources/**/*.scss',
+              config.src + '/states/**/*.scss',
+              config.src + '/components/**/*.scss'],
+              ['style']);
   // Watches for changes in style.sass and runs the sass task
   // gulp.watch('src/scss/style.sass', ['sass'])
 })
