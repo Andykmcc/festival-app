@@ -1,14 +1,15 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en-US" ng-app="am.fest">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title am-update-title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/js/main.js"></script>
   </head>
-  <body ng-app="am.fest">
-    <div ui-view></div>
+  <body>
+    <nav ui-view="nav"></nav>
+    <div ui-view="main"></div>
   </body>
 </html>
