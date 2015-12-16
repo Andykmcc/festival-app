@@ -13,7 +13,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function() {
-  return gulp.src(config.src + '/*.html')
+  return gulp.src(config.src + '/**/*.html')
     .pipe(gulp.dest(config.build))
     .pipe(plugins.connect.reload());
 });
