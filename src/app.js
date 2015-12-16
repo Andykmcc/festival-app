@@ -1,4 +1,4 @@
-var angular = require('angular');
+require('angular');
 require('angular-ui-router');
 
 angular.module('am.fest', ['ui.router'])
