@@ -49,7 +49,8 @@ gulp.task('style', ['clean-style'], function () {
   gulp.src([config.src + '/states/**/*.scss', config.src + '/components/**/*.scss'])
     .pipe(plugins.sass().on('error', plugins.sass.logError))
     .pipe(plugins.concat('main.css'))
-    .pipe(gulp.dest(config.build + '/style/'));
+    .pipe(gulp.dest(config.build + '/style/'))
+    .pipe(plugins.connect.reload());
 });
 
 gulp.task('watch', function() {
