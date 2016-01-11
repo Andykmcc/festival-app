@@ -1,3 +1,12 @@
+@import '../../styleResources/neat/neat';
+
 .Schedule__title {
-  color: blue;
+  padding: rem(20) 0 rem(10) 0;
+}
+.Schedule__calendar {
+  @include row;
+}
+.Schedule__stage {
+  @include span-columns(2 of 4);
+  padding: rem(10) 0 0 0;
 }

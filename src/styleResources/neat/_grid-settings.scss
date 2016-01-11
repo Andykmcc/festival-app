@@ -1,12 +1,12 @@
 @import '../../../node_modules/bourbon-neat/app/assets/stylesheets/neat-helpers';
 
 // Change the grid settings
-$column: 90px;
-$gutter: 30px;
+$column: rem(90);
+$gutter: rem(30);
 $grid-columns: 12;
-$max-width: 1200px;
+$max-width: rem(1200);
 
 // Define your breakpoints
-$desktop: new-breakpoint(min-width 960px 12); // looks up
-$tablet: new-breakpoint(min-width 481px 8);   // looks up
-$phone: new-breakpoint(max-width 480px 4);    // looks down
+$desktop: new-breakpoint(min-width rem(960) 12); // looks up
+$tablet: new-breakpoint(min-width rem(481) 8);   // looks up
+$phone: new-breakpoint(max-width rem(480) 4);    // looks down

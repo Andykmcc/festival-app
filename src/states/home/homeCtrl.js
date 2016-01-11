@@ -1,4 +1,7 @@
-module.exports = function () {
+require('angular');
+
+module.exports = angular.module('am.fest')
+.controller('homeCtrl', [function () {
   var Home = this;
-  this.title = 'Home';
-}
+  Home.title = 'Home';
+}]);

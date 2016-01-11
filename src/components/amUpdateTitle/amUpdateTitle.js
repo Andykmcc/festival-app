@@ -1,5 +1,6 @@
 // directiv to update title of page on state change
-module.exports = function($rootScope, $timeout) {
+module.exports = angular.module('am.fest')
+.directive('amUpdateTitle', ['$rootScope', '$timeout', function($rootScope, $timeout) {
   return {
     restrict: 'A',
     link: function(scope, element) {
@@ -12,4 +13,4 @@ module.exports = function($rootScope, $timeout) {
       $rootScope.$on('$stateChangeSuccess', updateTitle);
     }
   };
-}
+}]);

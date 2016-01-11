@@ -1,1 +1,8 @@
 <h1 class="Schedule__title">Schedule</h1>
+<div class="Schedule__calendar">
+  <ol class="Schedule__stage" ng-repeat="stage in Schedule.stages">
+    <li ng-repeat="event in stage.events">
+      <am-event event="event" class="Event"></am-event>
+    </li>
+  </ol>
+</div>

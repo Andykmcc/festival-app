@@ -1,0 +1,10 @@
+<div class="Event" tabindex="0" ng-click="Event.toggleActs()">
+  <h2 class="Event__name">{{Event.event.name}}</h2>
+  <p class="Event__dateTime">{{Event.event.dateTime | date:'medium'}}</p>
+  <ul class="Event__acts" ng-show="Event.showActs">
+    <li class="Event__act" ng-repeat="act in Event.event.acts">
+      <p class="Event__actName">{{act.name}}</p>
+      <p class="Event__actDesc">{{act.description}}</p>
+    </li>
+  </ul>
+</div>

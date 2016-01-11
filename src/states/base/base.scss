@@ -1,9 +1,17 @@
+@import '../../styleResources/bourbon/bourbon';
 @import '../../styleResources/neat/neat';
 @import 'reset';
 
+.Html,
+.Body {
+  min-height: 100vh;
+}
 .Nav__container {
   @include outer-container;
+  display: flex;
+  padding: 0 rem(10);
 }
 .Main__container {
   @include outer-container;
+  padding: 0 rem(10);
 }

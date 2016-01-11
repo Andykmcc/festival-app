@@ -1,0 +1,14 @@
+@import '../../styleResources/bourbon/bourbon';
+
+.Event {
+  display: block;
+  margin: 0 0 rem(10) 0;
+}
+.Event__name {}
+.Event__dateTime {}
+.Event__acts {
+  padding: rem(5) 0 0 rem(10);
+}
+.Event__act {}
+.Event__actName {}
+.Event__actDesc {}

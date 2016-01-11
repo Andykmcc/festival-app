@@ -31,7 +31,7 @@ gulp.task('clean-scripts', function () {
 
 gulp.task('scripts', ['clean-scripts'], function() {
   // Grabs the app.js file
-  return plugins.browserify(config.src + '/app.js')
+  return plugins.browserify(config.src + '/main.js')
     // bundles it and creates a file called main.js
     .bundle()
     .pipe(plugins.source('main.js'))
