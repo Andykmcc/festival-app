@@ -1,6 +1,6 @@
-Festival App
+# Festival App
 
-# Requires
+## Requires
 
 1. Node.js
 2. run `npm install`.
